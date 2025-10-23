@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember - The Future of Intercity Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Ember Logo-White.png" alt="Ember" class="logo-icon">
+            </div>
+            <div class="nav-links">
+                
+            </div>
+            <div class="nav-actions">
+                <span>Nav placeholder</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Bus. But Better.
+                </h1>
+                <p class="hero-subtitle">
+                    Scotland's 24/7 electric network. Low fares. Live tracking. Free with a bus pass.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat stat-left">
+                        <div class="stat-number">40,000+</div>
+                        <div class="stat-label">Weekly passengers</div>
+                    </div>
+                    <div class="stat stat-center">
+                        <div class="stat-number">364</div>
+                        <div class="stat-label">Available destinations</div>
+                    </div>
+                    <div class="stat stat-right">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Electric fleet</div>
+                    </div>
+                </div>
+                
+                <!-- Mobile carousel version -->
+                <div class="hero-stats-mobile">
+                    <div class="stat-carousel">
+                        <div class="stat-slide active">
+                            <div class="stat-number">36,000+</div>
+                            <div class="stat-label">Weekly passengers</div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-number">364</div>
+                            <div class="stat-label">Available destinations</div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Electric fleet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Booking Bar -->
+        <div class="booking-section">
+            <div class="booking-container">
+                <div class="booking-bar">
+                    <div class="booking-field">
+                        <label>From</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Dundee (City Centre)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div class="swap-button">
+                        <span class="swap-icon">⇄</span>
+                    </div>
+                    
+                    <div class="booking-field">
+                        <label>To</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Edinburgh (City Centre)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field date-field">
+                        <label>Out</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Mon 11 Aug" class="booking-input">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field date-field">
+                        <label>Return</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="No Return" class="booking-input">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field people-field">
+                        <label>People, Stuff & Wheelchairs</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="1 Adult (No Concessions)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary booking-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Map Section -->
+    <section class="live-map-section" id="live-map">
+        <div class="container">
+            <div class="section-header">
+                <h2>See your journey in real-time</h2>
+                <p>Track your coach's exact location, estimated arrival, and charging status with our live map.</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <span>Live Map Widget</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation">
+        <div class="container">
+            <div class="transformation-content">
+                <div class="transformation-text">
+                    <h2>Transforming public transport from necessity into preference</h2>
+                    <p>We've reimagined every touchpoint. From booking to boarding to arrival, we've designed an experience that's faster, more comfortable, and more reliable than driving.</p>
+                </div>
+                <div class="transformation-features">
+                    <div class="feature">
+                        <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h3>Extra-legroom seats</h3>
+                            <p>Spacious seating designed for comfort on longer journeys</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2V6M8 6H16M6 8H18C19.1046 8 20 8.89543 20 10V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V10C4 8.89543 4.89543 8 6 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h3>Fast USB charging</h3>
+                            <p>Stay connected with high-speed charging at every seat</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12.55A11 11 0 0 1 19 12.55M1.42 9A16 16 0 0 1 22.58 9M8.53 16.11A6 6 0 0 1 15.47 16.11M12 20H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h3>Free 5G Wi-Fi</h3>
+                            <p>Reliable internet connection throughout your journey</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="feature-content">
+                            <h3>Live tracking</h3>
+                            <p>Real-time location updates and arrival predictions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Storytelling Section -->
+    <section class="data-story">
+        <div class="container">
+            <div class="data-content">
+                <div class="data-header">
+                    <h2>Full-stack by design</h2>
+                    <p>We've built the operating system that powers seamless journeys, deployed the UK's fastest EV charging network, and operate Europe's largest electric coach fleet.</p>
+                </div>
+                <div class="data-grid">
+                    <div class="data-card">
+                        <div class="data-number">100%</div>
+                        <div class="data-label">Electric fleet</div>
+                        <div class="data-desc">Europe's largest electric coach fleet</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">18m+</div>
+                        <div class="data-label">Miles driven</div>
+                        <div class="data-desc">Zero emissions across our network</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">11+</div>
+                        <div class="data-label">Charging stations</div>
+                        <div class="data-desc">UK's fastest growing EV charging network</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">2026</div>
+                        <div class="data-label">International</div>
+                        <div class="data-desc">Expansion planned across Europe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="routes" id="routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Connecting cities with ease</h2>
+                <p>Our network spans across the country, connecting you to where you need to be.</p>
+            </div>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Aberdeen ↔ Edinburgh</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">3h 57m</span>
+                            <span class="price">From £17</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Edinburgh ↔ Dundee</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">1h 50m</span>
+                            <span class="price">From £9.20</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Aberdeen ↔ Inverness</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">1h 20m</span>
+                            <span class="price">From £13.60</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Make sustainable transport the obvious choice</h2>
+                <p>We're not just moving people; we're shifting an industry and reducing road congestion at scale.</p>
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Returning customers</div>
+                    </div>
+                    <div class="mission-stat">
+                        <div class="stat-number">35,000+</div>
+                        <div class="stat-label">Weekly bookings</div>
+                    </div>
+                    <div class="mission-stat">
+                        <div class="stat-number">99.2%</div>
+                        <div class="stat-label">On-time performance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to experience bus, but better?</h2>
+                <p>Join thousands of passengers who've made the switch to sustainable, comfortable intercity travel.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Start Your Journey (or other CTA)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Footer Placeholder</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

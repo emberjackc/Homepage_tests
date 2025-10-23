@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember - Modern Intercity Coach Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M3 12h18M3 6h18M3 18h18'/%3E%3C/svg%3E" alt="Ember" class="logo-icon">
+                <span class="logo-text">Ember</span>
+            </div>
+            <div class="nav-links">
+                <a href="#routes" class="nav-link">Routes</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary">Log in</button>
+                <button class="btn-primary">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Ember is a purpose-built service for modern intercity travel
+                </h1>
+                <p class="hero-subtitle">
+                    Meet the system for seamless coach journeys. Streamline your travel with comfort, reliability, and efficiency.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large">Start Your Journey</button>
+                    <button class="btn-secondary btn-large">View Routes</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="coach-showcase">
+                <div class="coach-illustration">
+                    <div class="coach-body"></div>
+                    <div class="coach-wheels"></div>
+                    <div class="coach-windows"></div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Routes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.2%</div>
+                        <div class="stat-label">On-time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Passengers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2>Made for modern travelers</h2>
+                <p>Ember is shaped by the principles that distinguish world-class transport from the rest: comfort, reliability, and a commitment to passenger experience.</p>
+            </div>
+            
+            <div class="features-layout">
+                <div class="feature-main">
+                    <div class="feature-card large">
+                        <div class="feature-icon">🚌</div>
+                        <h3>Purpose-built for comfort</h3>
+                        <p>Modern coaches designed with passenger comfort in mind, featuring spacious seating, climate control, and premium amenities that make every journey enjoyable.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-side">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Designed for reliability</h3>
+                        <p>Consistent schedules and on-time performance that you can depend on.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Crafted for efficiency</h3>
+                        <p>Optimized routes and smart scheduling to get you where you need to go.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="routes" id="routes">
+        <div class="container">
+            <div class="routes-header">
+                <h2>Connect major cities with ease</h2>
+                <p>Our network spans across the country, connecting you to where you need to be.</p>
+            </div>
+            
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>London ↔ Manchester</h3>
+                        <p>Frequent services every 30 minutes</p>
+                        <div class="route-details">
+                            <span class="duration">3h 15m</span>
+                            <span class="price">From £12</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Birmingham ↔ Liverpool</h3>
+                        <p>Direct services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">1h 45m</span>
+                            <span class="price">From £8</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Edinburgh ↔ Glasgow</h3>
+                        <p>Express services every 20 minutes</p>
+                        <div class="route-details">
+                            <span class="duration">1h 20m</span>
+                            <span class="price">From £6</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>Everything you need for a great journey</h2>
+                <p>From booking to arrival, we've got you covered with modern amenities and services.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Booking</h3>
+                    <p>Book and manage your journey with our intuitive mobile app.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">🆓</div>
+                    <h3>Free WiFi</h3>
+                    <p>Stay connected with complimentary high-speed internet on all services.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">🔌</div>
+                    <h3>Power Outlets</h3>
+                    <p>Charge your devices with USB and power outlets at every seat.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">🧳</div>
+                    <h3>Luggage Space</h3>
+                    <p>Generous luggage storage for all your travel needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Simple, transparent pricing</h2>
+                <p>No hidden fees, no surprises. Just great value travel.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard</h3>
+                    <div class="price">From £8</div>
+                    <ul class="features-list">
+                        <li>Comfortable seating</li>
+                        <li>Free WiFi</li>
+                        <li>Power outlets</li>
+                        <li>Luggage allowance</li>
+                    </ul>
+                    <button class="btn-primary">Choose Standard</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">From £15</div>
+                    <ul class="features-list">
+                        <li>Extra legroom</li>
+                        <li>Priority boarding</li>
+                        <li>Complimentary refreshments</li>
+                        <li>Everything in Standard</li>
+                    </ul>
+                    <button class="btn-primary">Choose Premium</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Business</h3>
+                    <div class="price">From £25</div>
+                    <ul class="features-list">
+                        <li>Reclining seats</li>
+                        <li>Personal workspace</li>
+                        <li>Premium refreshments</li>
+                        <li>Everything in Premium</li>
+                    </ul>
+                    <button class="btn-primary">Choose Business</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start your journey?</h2>
+                <p>Join thousands of satisfied passengers who choose Ember for their intercity travel.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Book Your Journey</button>
+                    <button class="btn-secondary btn-large">View All Routes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Routes</h4>
+                    <ul>
+                        <li><a href="#">London Routes</a></li>
+                        <li><a href="#">Northern Routes</a></li>
+                        <li><a href="#">Scottish Routes</a></li>
+                        <li><a href="#">All Routes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">Group Bookings</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ember. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

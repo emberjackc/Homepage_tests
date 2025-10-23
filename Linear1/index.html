@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember - The Future of Intercity Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Ember Logo-White.png" alt="Ember" class="logo-icon">
+            </div>
+            <div class="nav-links">
+                <a href="#routes" class="nav-link">Routes</a>
+                <a href="#live-map" class="nav-link">Live Map</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#coach-hire" class="nav-link">Coach Hire</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Bus. But Better.
+                </h1>
+                <p class="hero-subtitle">
+                    Scotland's 24/7 electric network. Low fares. Live tracking. Free with a bus pass.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat stat-left">
+                        <div class="stat-number">36,000+</div>
+                        <div class="stat-label">Weekly passengers</div>
+                    </div>
+                    <div class="stat stat-center">
+                        <div class="stat-number">364</div>
+                        <div class="stat-label">Available destinations</div>
+                    </div>
+                    <div class="stat stat-right">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Electric fleet</div>
+                    </div>
+                </div>
+                
+                <!-- Mobile carousel version -->
+                <div class="hero-stats-mobile">
+                    <div class="stat-carousel">
+                        <div class="stat-slide active">
+                            <div class="stat-number">36,000+</div>
+                            <div class="stat-label">Weekly passengers</div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-number">364</div>
+                            <div class="stat-label">Available destinations</div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Electric fleet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Booking Bar -->
+        <div class="booking-section">
+            <div class="booking-container">
+                <div class="booking-bar">
+                    <div class="booking-field">
+                        <label>From</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Dundee (City Centre)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div class="swap-button">
+                        <span class="swap-icon">⇄</span>
+                    </div>
+                    
+                    <div class="booking-field">
+                        <label>To</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Edinburgh (City Centre)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field date-field">
+                        <label>Out</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="Mon 11 Aug" class="booking-input">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field date-field">
+                        <label>Return</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="No Return" class="booking-input">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-field people-field">
+                        <label>People, Stuff & Wheelchairs</label>
+                        <div class="booking-input-wrapper">
+                            <input type="text" value="1 Adult (No Concessions)" class="booking-input">
+                            <span class="dropdown-icon">▼</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary booking-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Map Section -->
+    <section class="live-map-section" id="live-map">
+        <div class="container">
+            <div class="section-header">
+                <h2>See your journey in real-time</h2>
+                <p>Track your coach's exact location, estimated arrival, and charging status with our live map.</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <span>Live Map</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation">
+        <div class="container">
+            <div class="transformation-content">
+                <div class="transformation-text">
+                    <h2>Transforming public transport from necessity into preference</h2>
+                    <p>We've reimagined every touchpoint. From booking to boarding to arrival, we've designed an experience that's faster, more comfortable, and more reliable than driving.</p>
+                    <div class="transformation-features">
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-content">
+                                <h3>Extra-legroom seats</h3>
+                                <p>Spacious seating designed for comfort on longer journeys</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🔌</div>
+                            <div class="feature-content">
+                                <h3>Fast USB charging</h3>
+                                <p>Stay connected with high-speed charging at every seat</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">📶</div>
+                            <div class="feature-content">
+                                <h3>Free 5G Wi-Fi</h3>
+                                <p>Reliable internet connection throughout your journey</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🗺️</div>
+                            <div class="feature-content">
+                                <h3>Live tracking</h3>
+                                <p>Real-time location updates and arrival predictions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformation-visual">
+                    <div class="bus-placeholder">
+                        <span>Placeholder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Storytelling Section -->
+    <section class="data-story">
+        <div class="container">
+            <div class="data-content">
+                <div class="data-header">
+                    <h2>Full-stack by design</h2>
+                    <p>We've built the operating system that powers seamless journeys, deployed the UK's fastest EV charging network, and operate Europe's largest electric coach fleet.</p>
+                </div>
+                <div class="data-grid">
+                    <div class="data-card">
+                        <div class="data-number">100%</div>
+                        <div class="data-label">Electric fleet</div>
+                        <div class="data-desc">Europe's largest electric coach fleet</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">18m+</div>
+                        <div class="data-label">Miles driven</div>
+                        <div class="data-desc">Zero emissions across our network</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">11+</div>
+                        <div class="data-label">Charging stations</div>
+                        <div class="data-desc">UK's fastest growing EV charging network</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">2026</div>
+                        <div class="data-label">International</div>
+                        <div class="data-desc">Expansion planned across Europe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="routes" id="routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Connecting cities with ease</h2>
+                <p>Our network spans across the country, connecting you to where you need to be.</p>
+            </div>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Aberdeen ↔ Edinburgh</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">3h 57m</span>
+                            <span class="price">From £17</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Edinburgh ↔ Dundee</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">1h 50m</span>
+                            <span class="price">From £9.20</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h3>Aberdeen ↔ Inverness</h3>
+                        <p>Services every hour</p>
+                        <div class="route-details">
+                            <span class="duration">1h 20m</span>
+                            <span class="price">From £13.60</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Make sustainable transport the obvious choice</h2>
+                <p>We're not just moving people; we're shifting an industry and reducing road congestion at scale.</p>
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Returning customers</div>
+                    </div>
+                    <div class="mission-stat">
+                        <div class="stat-number">35,000+</div>
+                        <div class="stat-label">Weekly bookings</div>
+                    </div>
+                    <div class="mission-stat">
+                        <div class="stat-number">99.2%</div>
+                        <div class="stat-label">On-time performance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to experience the future of travel?</h2>
+                <p>Join thousands of passengers who've made the switch to sustainable, comfortable intercity travel.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Start Your Journey</button>
+                    <button class="btn-secondary btn-large">View Live Map</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Routes</h4>
+                    <ul>
+                        <li><a href="#">London Routes</a></li>
+                        <li><a href="#">Northern Routes</a></li>
+                        <li><a href="#">Scottish Routes</a></li>
+                        <li><a href="#">All Routes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Live Map</a></li>
+                        <li><a href="#">Coach Hire</a></li>
+                        <li><a href="#">Group Bookings</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ember. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
