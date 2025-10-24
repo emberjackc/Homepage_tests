@@ -928,13 +928,6 @@ html {
     background-color: var(--primary-bg);
 }
 
-.cta-section {
-    background: linear-gradient(135deg, #00FF9F 0%, #00e68a 100%);
-}
-
-.footer {
-    background-color: var(--primary-bg);
-}
 
 /* Utility classes */
 .text-center {

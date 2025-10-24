@@ -398,6 +398,42 @@ document.addEventListener('keydown', (e) => {
 
 // Removed scroll-based background effects - keeping simple black design
 
+// Dynamic navbar background based on section
+function updateNavbarTheme() {
+    const nav = document.querySelector('.nav');
+    const featuresSection = document.querySelector('.features');
+    const liveMapSection = document.querySelector('.live-map-section');
+    const logo = document.querySelector('.nav-logo .logo');
+    
+    if (!nav || !featuresSection || !logo) return;
+    
+    const featuresTop = featuresSection.offsetTop;
+    const liveMapTop = liveMapSection ? liveMapSection.offsetTop : featuresTop;
+    const scrollY = window.scrollY;
+    
+    // Check if we're over the live map section (white background)
+    const isOverLiveMap = liveMapSection && scrollY >= liveMapTop - 100 && scrollY < featuresTop - 100;
+    
+    // If scrolled past the features section (but not over live map), use dark theme
+    if (scrollY >= featuresTop - 100 && !isOverLiveMap) {
+        nav.classList.remove('light-theme');
+        nav.classList.add('dark-theme');
+        // Use white logo for dark background
+        logo.src = 'Assets/Ember Logo-White.png';
+    } else {
+        nav.classList.remove('dark-theme');
+        nav.classList.add('light-theme');
+        // Use black logo for light background
+        logo.src = 'Assets/Ember-Logo-Colour.png';
+    }
+}
+
+// Update navbar theme on scroll
+window.addEventListener('scroll', updateNavbarTheme);
+
+// Initial call
+updateNavbarTheme();
+
 // Console welcome message
-console.log('%c🚌 Welcome to Ember', 'color: #00FF9F; font-size: 20px; font-weight: bold;');
-console.log('%cThe future of intercity travel', 'color: #b3b3b3; font-size: 14px;');
+console.log('%c🚌 Welcome to Ember', 'color: #4F917A; font-size: 20px; font-weight: bold;');
+console.log('%cThe future of intercity travel', 'color: #4a4a4a; font-size: 14px;');
