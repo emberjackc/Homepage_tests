@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember - The Future of Intercity Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kiwi/icons@1.0.0/dist/kiwi-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Assets/Ember-Logo-Colour.png" alt="Ember" class="logo">
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Nav Placeholder</a>
+            </div>
+            <div class="nav-actions">
+            
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    The future of <span class="highlight">intercity travel</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ember is transforming public transport from necessity into preference. 
+                    We're building a service that doesn't just compete with cars—it makes them irrelevant.
+                </p>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-search-container">
+                    <div class="hero-booking-form">
+                        <div class="booking-form">
+                            <div class="form-group">
+                                <label>From</label>
+                                <input type="text" placeholder="Dundee (City Centre)" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>To</label>
+                                <input type="text" placeholder="Edinburgh (City Centre)" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Out</label>
+                                <input type="date" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Return</label>
+                                <select class="form-input">
+                                    <option>No Return</option>
+                                    <option>Return</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>People, Stuff & Wheelchairs</label>
+                                <select class="form-input">
+                                    <option>1 Adult (No Concessions)</option>
+                                    <option>2 Adults</option>
+                                    <option>1 Adult + 1 Child</option>
+                                    <option>1 Adult + 1 Senior</option>
+                                    <option>1 Adult + 1 Student</option>
+                                    <option>Wheelchair Access</option>
+                                </select>
+                            </div>
+                            <button class="btn-primary btn-booking">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Removed separate booking bar - now integrated into hero -->
+
+    <!-- Live Map Section -->
+    <section class="live-map-section" id="live-map">
+        <div class="live-map-container">
+            <div class="live-map-content">
+                <h2 class="section-title">See your bus in real-time</h2>
+                <p class="section-subtitle">Track your journey with our live map technology</p>
+                <div class="map-features">
+                    <div class="map-feature">
+                        <span class="map-feature-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Real-time location tracking</span>
+                    </div>
+                    <div class="map-feature">
+                        <span class="map-feature-icon"><i class="fas fa-clock"></i></span>
+                        <span>Accurate arrival predictions</span>
+                    </div>
+                    <div class="map-feature">
+                        <span class="map-feature-icon"><i class="fas fa-bus"></i></span>
+                        <span>Live bus positions</span>
+                    </div>
+                </div>
+                <button class="btn-secondary">View Live Map</button>
+            </div>
+            <div class="live-map-visual">
+                <div class="map-placeholder">
+                    <img src="Assets/LiveMapDark.jpg" alt="Live Map Preview" class="map-image">
+                    <div class="map-overlay">
+                        <div class="map-bus-indicator">
+                            <div class="bus-icon live-dot"></div>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">Why choose Ember?</h2>
+                <p class="section-subtitle">We've reimagined every touchpoint of your journey</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">100% Electric</h3>
+                        <p class="feature-description">Europe's largest electric coach fleet, powered by the UK's fastest charging network</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Live Tracking</h3>
+                        <p class="feature-description">Real-time location updates so you know exactly where your bus is</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Extra Legroom</h3>
+                        <p class="feature-description">Spacious seats with proper working toilets and fast USB charging</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Free 5G WiFi</h3>
+                        <p class="feature-description">Stay connected with high-speed internet throughout your journey</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Flexible Booking</h3>
+                        <p class="feature-description">Free ticket cancellations and changes up to 2 hours before departure</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">Icon or feature image</div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Sustainable</h3>
+                        <p class="feature-description">Making sustainable transport the obvious choice for intercity travel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Coach Hire Section -->
+    <section class="coach-hire" id="coach-hire">
+        <div class="coach-hire-container">
+            <div class="coach-hire-content">
+                <h2 class="section-title">Coach Hire Services</h2>
+                <p class="section-subtitle">Professional transport solutions for groups and events</p>
+                <div class="coach-features">
+                    <div class="coach-feature">
+                        <h3>Corporate Events</h3>
+                        <p>Reliable transport for business meetings and conferences</p>
+                    </div>
+                    <div class="coach-feature">
+                        <h3>Group Travel</h3>
+                        <p>Comfortable journeys for sports teams, school trips, and social groups</p>
+                    </div>
+                    <div class="coach-feature">
+                        <h3>Special Occasions</h3>
+                        <p>Weddings, celebrations, and memorable events</p>
+                    </div>
+                </div>
+                <button class="btn-secondary">Find out more</button>
+            </div>
+            <div class="coach-hire-visual">
+                <img src="https://www.ember.to/static/3b83cdd86bc9f2542f1c58b34c99db4e/a4c83/dean-bridge-4.webp" alt="Coach Hire" class="coach-image">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="Assets/Ember Logo-White.png" alt="Ember" class="footer-logo">
+                    <p class="footer-description">
+                        Transforming public transport from necessity into preference.
+                    </p>
+                    <p class="footer-placeholder">footer placeholder</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
