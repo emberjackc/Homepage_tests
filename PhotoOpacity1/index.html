@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('font/Montserrat-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('font/Montserrat-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('font/Montserrat-Italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            height: 30px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .nav-text {
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .header-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('Header6.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1px;
+            height: 1px;
+        }
+
+        .header-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 80%);
+        }
+
+        .header-headline {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        .booking-form {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 1.4rem 220px 1.4rem 1.4rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin: 0 0.5rem;
+            position: relative;
+        }
+
+        .form-group:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            margin-right: 0;
+        }
+
+        .form-group:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -0.5rem;
+            top: -1.4rem;
+            bottom: -1.4rem;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group:nth-last-child(2)::after {
+            right: calc(-0.5rem - 200px);
+        }
+
+        .form-group label {
+            font-size: 0.875rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem 0.75rem 0.75rem 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            background: transparent;
+            color: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+        }
+
+        .swap-button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .search-button {
+            background: #4F917A;
+            color: white;
+            border: none;
+            padding: 0.75rem 0 0.75rem 1.5rem;
+            border-radius: 0;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.875rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+        }
+
+        .search-button:hover {
+            background: #3d7460;
+        }
+
+        .content-block {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .coach-services-section {
+            display: flex;
+            min-height: 60vh;
+            padding: 0 2rem;
+            background: white;
+        }
+
+        .coach-text-column {
+            flex: 1;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .coach-text-column h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .coach-text-column .intro {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .service-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .service-item h3 {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .coach-cta-button {
+            background: transparent;
+            border: 1px solid #333;
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 2rem;
+            align-self: flex-start;
+        }
+
+        .coach-cta-button:hover {
+            background: #333;
+            color: white;
+        }
+
+        .coach-image-column {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coach-image-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .two-column-section {
+            display: flex;
+            min-height: 60vh;
+            padding: 0 2rem;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-column {
+            background: white;
+        }
+
+        .text-column {
+            padding: 4rem;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-column h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: left !important;
+        }
+
+        .text-content {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .text-column p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        @media (max-width: 910px) {
+            .header-section {
+                background-image: url('Header6small.png');
+            }
+            
+            .header-content {
+                transform: translate(-50%, 70%);
+            }
+            
+            .header-headline {
+                font-size: 0.975rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Ember-Logo-Colour.png" alt="Logo">
+        </div>
+        <div class="nav-text">PLACEHOLDER NAV</div>
+    </nav>
+
+    <section class="header-section">
+        <div class="header-content">
+            <h1 class="header-headline">Scotland's 24/7 electric network. Low fares. Live tracking. Free with a bus pass. Book Now.</h1>
+        </div>
+        
+        <div class="booking-form">
+            <div class="form-group">
+                <label for="from">From</label>
+                <input type="text" id="from" value="Dundee (City Centre)" readonly>
+            </div>
+            
+            <button class="swap-button" title="Swap destinations">⇄</button>
+            
+            <div class="form-group">
+                <label for="to">To</label>
+                <input type="text" id="to" value="Edinburgh (City Centre)" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="out">Out</label>
+                <input type="text" id="out" value="Fri 24 Oct" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="return">Return</label>
+                <input type="text" id="return" value="No return" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="passengers">People, Bikes & Wheelchairs</label>
+                <input type="text" id="passengers" value="1 adult (no concessions)" readonly>
+            </div>
+            
+            <button class="search-button">Search</button>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <!-- Content will be added here -->
+    </section>
+
+    <section class="two-column-section">
+        <div class="column image-column">
+            <img src="placeholder.jpg" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="column text-column">
+            <h2>Placeholder title</h2>
+            <p class="intro-text">This is a single column text block that spans the full width of the two columns below. It provides an introduction or summary before the detailed two-column content.</p>
+            <div class="text-content">
+                <div>
+                    <p>This is where your content text will go. You can add multiple paragraphs and format the text as needed.</p>
+                    <p>Add more content here to fill out this section with relevant information about your service or product.</p>
+                </div>
+                <div>
+                    <p>This is the second column of text content. You can add different information here to create a balanced layout.</p>
+                    <p>More content can be added to this column to provide additional details or supporting information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <!-- Content will be added here -->
+    </section>
+
+    <section class="coach-services-section">
+        <div class="coach-text-column">
+            <h2>Placeholder, section 2</h2>
+            <p class="intro">Professional transport solutions for groups and events</p>
+            
+            <div class="service-item">
+                <h3>Corporate Events</h3>
+                <p>Reliable transport for business meetings and conferences</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>Group Travel</h3>
+                <p>Comfortable journeys for sports teams, school trips, and social groups</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>Special Occasions</h3>
+                <p>Weddings, celebrations, and memorable events</p>
+            </div>
+            
+            <button class="coach-cta-button">Find out more</button>
+        </div>
+        
+        <div class="coach-image-column">
+            <img src="coach-services-image.jpg" alt="Coach Services" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            const bookingForm = document.querySelector('.booking-form');
+            
+            if (bookingForm) {
+                const bookingFormTop = bookingForm.offsetTop;
+                const navHeight = nav.offsetHeight;
+                
+                if (window.scrollY + navHeight >= bookingFormTop) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
