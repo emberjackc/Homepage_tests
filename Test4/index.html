@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember Homepage</title>
+  <style>
+    /* Fonts: Montserrat Variable */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('Font/Montserrat-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('Font/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: italic;
+      font-display: swap;
+    }
+    /* Base & Layout */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    html { background: #ffffff; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff; /* Background behind the page */
+    }
+
+    .page {
+      max-width: 1280px; /* Main page cap */
+      margin: 0 auto;
+      background: #ffffff; /* Page surface */
+      min-height: 100vh;
+      box-shadow: none;
+    }
+
+    /* Navigation */
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      background: #ffffff; /* White nav */
+      border-bottom: 1px solid #e6e8eb;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px;
+    }
+    .nav-left { color: #0f172a; font-weight: 600; letter-spacing: 0.2px; }
+    .nav-left img { height: 28px; width: auto; display: block; }
+
+    /* Header */
+    .header {
+      padding: 32px 20px 12px 20px;
+    }
+    .headline {
+      font-size: clamp(22px, 3.4vw, 32px);
+      line-height: 1.2;
+      margin: 0 0 clamp(16px, 3vw, 32px) 0;
+      font-weight: 800;
+      max-width: 66%;
+    }
+    .subhead {
+      margin: 0 0 18px 0;
+      color: #475569;
+      font-size: 15px;
+    }
+    .cta-row { margin-bottom: 16px; }
+    .cta-row .cta {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #4F917A;
+      color: #ffffff; text-decoration: none; font-weight: 600;
+      font-size: 14px;
+    }
+    .cta-row .cta:hover { background: #3d7461; }
+
+    /* Search Bar (inspired by screenshot) */
+    .search {
+      border: 1px solid #e6e8eb;
+      border-radius: 0;
+      padding: 14px;
+      margin-bottom: 16px;
+      margin-left: -20px; margin-right: -20px;
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr 0.9fr 0.9fr 1.4fr auto;
+      gap: 12px;
+      align-items: end;
+      overflow-x: auto;
+      position: sticky;
+      top: 57px; /* Nav height (14px padding + 28px logo + 14px padding + 1px border) */
+      z-index: 9;
+      background: #ffffff;
+    }
+
+    .field { position: relative; min-width: 140px; }
+    .label { font-size: 12px; color: #334155; margin: 0 0 6px 2px; font-weight: 600; }
+    .input {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      border: 1px solid #d9dde3;
+      border-radius: 0;
+      background: #ffffff;
+      color: #0f172a;
+      font-size: 15px;
+      outline: none;
+    }
+    .input:focus { border-color: #4F917A; box-shadow: 0 0 0 3px rgba(79,145,122,0.15); }
+
+    .swap {
+      position: absolute;
+      right: -26px; top: 28px;
+      width: 24px; height: 24px; border: 1px solid #d9dde3; border-radius: 0;
+      display: none; align-items: center; justify-content: center; background: #fff; color: #0f172a;
+      cursor: pointer;
+    }
+
+    .search-btn {
+      height: 44px; min-width: 120px; border: none; cursor: pointer;
+      padding: 0 18px; border-radius: 0; font-weight: 700; font-size: 15px;
+      background: #4F917A; color: #ffffff;
+    }
+    .search-btn:hover { background: #3d7461; }
+
+    /* Header full-width image below search */
+    .header-image { display: block; width: 100%; height: clamp(180px, 28vw, 420px); margin: 0; object-fit: cover; object-position: center; }
+    .header-media { position: relative; margin-left: -20px; margin-right: -20px; overflow: visible; }
+    .edge-badge {
+      position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%);
+      background: transparent; color: #000000;
+      padding: 0; margin: 0;
+      font-weight: 700; line-height: 1.05;
+      font-size: clamp(36px, 7vw, 96px);
+      width: 66.666%; text-align: center;
+      white-space: nowrap;
+      z-index: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .search { grid-template-columns: 1fr 1fr; }
+      .search-btn { grid-column: 1 / -1; width: 100%; }
+      .swap { display: none; }
+    }
+    @media (max-width: 560px) {
+      .search { grid-template-columns: 1fr; }
+      .field { min-width: 100%; }
+      .nav-right img { height: 24px; }
+    }
+
+    /* Blank section */
+    .spacer { padding: 40px 20px 120px 20px; min-height: 400px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Nav: white bar, Placeholder left, Ember logo right -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <img src="../Test2/Assets/Ember-Logo-Colour.png" alt="Ember logo">
+        </div>
+        <div class="nav-right">Placeholder</div>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <section class="header">
+      <h1 class="headline">Fast, comfortable, live‑tracked journeys 24/7. Free with a bus pass. Book now.</h1>
+
+      <!-- Search Bar Inspired by Screenshot -->
+      <form class="search" action="#" method="get">
+        <div class="field">
+          <label class="label" for="from">From</label>
+          <input class="input" id="from" name="from" type="text" value="Dundee (City Centre)" aria-label="From">
+        </div>
+
+        <div class="field" style="position:relative;">
+          <label class="label" for="to">To</label>
+          <input class="input" id="to" name="to" type="text" value="Edinburgh (City Centre)" aria-label="To">
+          <button type="button" class="swap" aria-label="Swap">⇄</button>
+        </div>
+
+        <div class="field">
+          <label class="label" for="out">Out</label>
+          <input class="input" id="out" name="out" type="text" value="Thu 30 Oct" aria-label="Out">
+        </div>
+
+        <div class="field">
+          <label class="label" for="return">Return</label>
+          <input class="input" id="return" name="return" type="text" value="No return" aria-label="Return">
+        </div>
+
+        <div class="field">
+          <label class="label" for="pax">People, Bikes & Wheelchairs</label>
+          <input class="input" id="pax" name="pax" type="text" value="1 adult (no concessions)" aria-label="People, Bikes & Wheelchairs">
+        </div>
+
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+      <div class="header-media">
+        <img class="header-image" src="Header2.jpg" alt="Header image">
+        <h2 class="edge-badge">Bus. But Better</h2>
+      </div>
+    </section>
+
+    <section class="spacer"></section>
+  </div>
+</body>
+</html>

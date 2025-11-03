@@ -114,7 +114,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(4px);
             padding: 1.4rem 220px 1.4rem 1.4rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -157,7 +157,7 @@
 
         .form-group label {
             font-size: 0.875rem;
-            color: white;
+            color: #000000;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
@@ -169,7 +169,7 @@
             border-radius: 6px;
             font-size: 0.875rem;
             background: transparent;
-            color: white;
+            color: #000000;
         }
 
         .form-group input:focus,
@@ -180,7 +180,7 @@
         .swap-button {
             background: none;
             border: none;
-            color: white;
+            color: #000000;
             cursor: pointer;
             padding: 0.5rem;
             margin-top: 1.5rem;
@@ -372,14 +372,17 @@
                 flex: none;
             }
             
+            /* Ensure percentages include padding and borders */
+            .booking-form * { box-sizing: border-box; }
+
             .form-group:first-child {
                 display: flex;
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: flex-end; /* align bottoms so button lines up with input */
             }
             
             .form-group:first-child .input-container {
-                width: 80%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
             }
@@ -392,15 +395,7 @@
                 padding-left: 0;
             }
             
-            .swap-button {
-                width: 20%;
-                margin: 0;
-                padding: 0.75rem;
-                font-size: 1.2rem;
-                flex-shrink: 0;
-                align-self: flex-start;
-                margin-top: 2rem;
-            }
+            /* swap button removed */
             
             .form-group:not(:last-child)::after {
                 content: '';
@@ -440,7 +435,6 @@
                 <div class="input-container">
                     <input type="text" id="from" value="Dundee (City Centre)" readonly>
                 </div>
-                <button class="swap-button" title="Swap destinations">⇄</button>
             </div>
             
             <div class="form-group">
