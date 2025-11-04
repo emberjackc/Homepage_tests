@@ -44,7 +44,9 @@
       position: sticky; top: 0; z-index: 10;
       background: #ffffff; /* White nav */
       border-bottom: 1px solid #e6e8eb;
+      transition: border-bottom 0.2s ease;
     }
+    .nav.stuck-together { border-bottom: none; }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
       padding: 14px 20px;
@@ -95,6 +97,14 @@
       top: 57px; /* Nav height (14px padding + 28px logo + 14px padding + 1px border) */
       z-index: 9;
       background: #ffffff;
+      transition: border 0.2s ease, top 0.2s ease;
+    }
+    .search.stuck-together {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #e6e8eb;
+      top: 56px; /* Nav height without border (14px + 28px + 14px) */
     }
 
     .field { position: relative; min-width: 140px; }
@@ -204,12 +214,39 @@
         <button class="search-btn" type="submit">Search</button>
       </form>
       <div class="header-media">
-        <img class="header-image" src="Header2.jpg" alt="Header image">
+        <img class="header-image" src="Rannoch_Moor.jpg" alt="Header image">
         <h2 class="edge-badge">Bus. But Better</h2>
       </div>
     </section>
 
     <section class="spacer"></section>
   </div>
+  <script>
+    const nav = document.querySelector('.nav');
+    const searchForm = document.querySelector('.search');
+    const header = document.querySelector('.header');
+    
+    function checkStuckTogether() {
+      const navRect = nav.getBoundingClientRect();
+      const searchRect = searchForm.getBoundingClientRect();
+      const navBottom = navRect.bottom;
+      const searchTop = searchRect.top;
+      
+      // Check if search form is stuck (at its sticky position) and touching the nav
+      // When stuck, search form top should be at nav bottom (57px from top)
+      if (Math.abs(navBottom - searchTop) < 2 && searchRect.top <= 58) {
+        nav.classList.add('stuck-together');
+        searchForm.classList.add('stuck-together');
+      } else {
+        nav.classList.remove('stuck-together');
+        searchForm.classList.remove('stuck-together');
+      }
+    }
+    
+    window.addEventListener('scroll', checkStuckTogether);
+    window.addEventListener('resize', checkStuckTogether);
+    // Check on load
+    checkStuckTogether();
+  </script>
 </body>
 </html>

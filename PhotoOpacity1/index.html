@@ -73,7 +73,7 @@
 
         .header-section {
             position: relative;
-            height: 100vh;
+            height: 500px;
             background-image: url('Header6.png');
             background-size: cover;
             background-position: center;
@@ -103,112 +103,16 @@
             transform: translate(-50%, 80%);
         }
 
+        .header-tagline {
+            display: none;
+        }
+
         .header-headline {
             font-size: 1.5rem;
             font-weight: normal;
             margin-bottom: 1rem;
         }
 
-        .booking-form {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(4px);
-            padding: 1.4rem 220px 1.4rem 1.4rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border-top: 1px solid rgba(255, 255, 255, 0.6);
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            margin: 0 0.5rem;
-            position: relative;
-        }
-
-        .form-group:last-child {
-            display: flex;
-            flex-direction: column;
-            justify-content: stretch;
-            margin-right: 0;
-        }
-
-        .form-group:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -0.5rem;
-            top: -1.4rem;
-            bottom: -1.4rem;
-            width: 1px;
-            background: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-group:nth-last-child(2)::after {
-            right: calc(-0.5rem - 200px);
-        }
-
-        .form-group label {
-            font-size: 0.875rem;
-            color: white;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select {
-            padding: 0.75rem 0.75rem 0.75rem 0;
-            border: none;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            background: transparent;
-            color: white;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-        }
-
-        .swap-button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .search-button {
-            background: #4F917A;
-            color: white;
-            border: none;
-            padding: 0.75rem 0 0.75rem 1.5rem;
-            border-radius: 0;
-            font-weight: 500;
-            cursor: pointer;
-            font-size: 0.875rem;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            width: 200px;
-        }
-
-        .search-button:hover {
-            background: #3d7460;
-        }
 
         .content-block {
             padding: 4rem 2rem;
@@ -295,7 +199,7 @@
         .two-column-section {
             display: flex;
             min-height: 60vh;
-            padding: 0 2rem;
+            padding: 0;
         }
 
         .column {
@@ -314,6 +218,7 @@
             background: white;
             display: flex;
             flex-direction: column;
+            text-align: left;
         }
 
         .text-column h2 {
@@ -335,6 +240,7 @@
             color: #666;
             margin-bottom: 1.5rem;
             flex: 1;
+            text-align: left;
         }
 
         .intro-text {
@@ -345,78 +251,149 @@
             text-align: left;
         }
 
+        .journey-search {
+            width: 100%;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .search-form .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 150px;
+            position: relative;
+        }
+
+        .search-form .form-group label {
+            font-size: 0.875rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .search-form .form-group input,
+        .search-form .form-group select {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            background: white;
+            color: #333;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-form .form-group input:focus,
+        .search-form .form-group select:focus {
+            outline: none;
+            border-color: #4F917A;
+        }
+
+        .search-form .search-button {
+            background: #4F917A;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: background 0.3s ease;
+            height: fit-content;
+        }
+
+        .search-form .search-button:hover {
+            background: #3d7460;
+        }
+
         @media (max-width: 910px) {
             .header-section {
-                background-image: url('Header6small.png');
+                background-image: none;
+                background-color: white;
+                height: auto;
+                min-height: auto;
+                padding: 5rem 1rem 0.5rem 1rem;
+                margin-top: 0;
+                margin-bottom: 0;
             }
             
             .header-content {
-                transform: translate(-50%, 0);
-                top: 20vh;
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                text-align: left;
+            }
+            
+            .header-tagline {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #000000;
+                margin-bottom: 0.5rem;
             }
             
             .header-headline {
                 font-size: 0.975rem;
+                color: #000000;
             }
-            
-            .booking-form {
+
+            .journey-search {
+                padding: 0.5rem 1rem 1.5rem 1rem;
+            }
+
+            .search-form {
                 flex-direction: column;
-                gap: 1rem;
-                padding: 1.4rem;
+                align-items: stretch;
             }
-            
-            .form-group {
-                margin: 0;
+
+            .search-form .form-group {
                 width: 100%;
-                position: relative;
-                flex: none;
+                min-width: 100%;
             }
-            
-            .form-group:first-child {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
+
+            .search-form .search-button {
+                width: 100%;
+                margin-top: 0.5rem;
             }
-            
-            .form-group:first-child .input-container {
-                width: 80%;
-                display: flex;
+
+            .two-column-section {
                 flex-direction: column;
+                min-height: auto;
+                padding: 0;
             }
-            
-            .form-group:first-child input {
+
+            .two-column-section .image-column {
                 width: 100%;
-                margin-right: 0;
-                text-align: left;
-                flex: none;
-                padding-left: 0;
+                min-height: 250px;
+                order: 2;
             }
-            
-            .swap-button {
-                width: 20%;
-                margin: 0;
-                padding: 0.75rem;
-                font-size: 1.2rem;
-                flex-shrink: 0;
-                align-self: flex-start;
-                margin-top: 2rem;
+
+            .two-column-section .text-column {
+                padding: 2rem 1rem;
+                order: 1;
             }
-            
-            .form-group:not(:last-child)::after {
-                content: '';
-                position: absolute;
-                bottom: -0.5rem;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background: rgba(255, 255, 255, 0.6);
+
+            .two-column-section .text-column h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
             }
-            
-            .search-button {
-                position: relative;
-                width: 100%;
-                height: auto;
-                margin-top: 1rem;
+
+            .two-column-section .text-column p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -431,39 +408,49 @@
 
     <section class="header-section">
         <div class="header-content">
+            <div class="header-tagline">Bus. But Better</div>
             <h1 class="header-headline">Scotland's 24/7 electric network. Low fares. Live tracking. Free with a bus pass. Book Now.</h1>
         </div>
-        
-        <div class="booking-form">
+    </section>
+
+    <section class="journey-search">
+        <form class="search-form">
             <div class="form-group">
                 <label for="from">From</label>
-                <div class="input-container">
-                    <input type="text" id="from" value="Dundee (City Centre)" readonly>
-                </div>
-                <button class="swap-button" title="Swap destinations">⇄</button>
+                <input type="text" id="from" name="from" placeholder="Enter departure location">
             </div>
-            
             <div class="form-group">
                 <label for="to">To</label>
-                <input type="text" id="to" value="Edinburgh (City Centre)" readonly>
+                <input type="text" id="to" name="to" placeholder="Enter destination">
             </div>
-            
             <div class="form-group">
-                <label for="out">Out</label>
-                <input type="text" id="out" value="Fri 24 Oct" readonly>
+                <label for="out-date">Out</label>
+                <input type="date" id="out-date" name="out-date">
             </div>
-            
             <div class="form-group">
-                <label for="return">Return</label>
-                <input type="text" id="return" value="No return" readonly>
+                <label for="return-date">Return</label>
+                <input type="date" id="return-date" name="return-date">
             </div>
-            
             <div class="form-group">
                 <label for="passengers">People, Bikes & Wheelchairs</label>
-                <input type="text" id="passengers" value="1 adult (no concessions)" readonly>
+                <select id="passengers" name="passengers">
+                    <option value="1">1 adult (no concessions)</option>
+                    <option value="2">2 adults</option>
+                    <option value="1-bike">1 adult + bike</option>
+                    <option value="1-wheelchair">1 adult + wheelchair</option>
+                </select>
             </div>
-            
-            <button class="search-button">Search</button>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </section>
+
+    <section class="two-column-section">
+        <div class="column image-column">
+            <img src="placeholder.jpg" alt="Live Tracking" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+        </div>
+        <div class="column text-column">
+            <h2>Live Tracking</h2>
+            <p>Track your bus in real-time with our live map. Always know exactly where your bus is and how long you have to wait, so you're never left standing around.</p>
         </div>
     </section>
 
@@ -497,13 +484,14 @@
     <script>
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
-            const bookingForm = document.querySelector('.booking-form');
+            const headerSection = document.querySelector('.header-section');
             
-            if (bookingForm) {
-                const bookingFormTop = bookingForm.offsetTop;
+            if (nav && headerSection) {
                 const navHeight = nav.offsetHeight;
+                const headerBottom = headerSection.offsetTop + headerSection.offsetHeight;
+                const navBottom = window.scrollY + navHeight;
                 
-                if (window.scrollY + navHeight >= bookingFormTop) {
+                if (navBottom >= headerBottom) {
                     nav.classList.add('scrolled');
                 } else {
                     nav.classList.remove('scrolled');
