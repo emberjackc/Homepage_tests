@@ -157,6 +157,15 @@
       .search-btn { grid-column: 1 / -1; width: 100%; }
       .swap { display: none; }
     }
+    @media (max-width: 768px) {
+      .search {
+        position: static;
+        top: auto;
+      }
+      .search.stuck-together {
+        top: auto;
+      }
+    }
     @media (max-width: 560px) {
       .search { grid-template-columns: 1fr; }
       .field { min-width: 100%; }
